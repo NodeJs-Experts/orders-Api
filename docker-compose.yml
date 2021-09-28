@@ -5,25 +5,25 @@ services:
     image: postgres
     container_name: database_orders
     restart: always
-    ports:
+    ports: 
       - 5432:5432
-    environment:
+    environment: 
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=orders
       - POSTGRES_DB=orders_db
     volumes:
       - pgdata:/data/postgres
-
+    
   app:
     build: .
-    container_name: orders_api
+    container_name: ordersapi
     ports:
       - 3333:3333
     volumes:
       - .:/usr/app
     links:
       - database
-    depends_on:
+    depends_on: 
       - database
 
 volumes:
