@@ -1,9 +1,9 @@
 {
   "name": "orders-Api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/shared/infra/http/server.ts",
   "repository": "https://github.com/NodeJs-Experts/orders-Api.git",
-  "author": "aleeixoj <aleeixojunior2016@hotmail.com>",
+  "author": "NodeJs Experts <https://github.com/NodeJs-Experts>",
   "license": "MIT",
   "scripts": {
     "build": "tsc",

@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Orders Api" />
+  <!-- <img src="./.github/app.gif" alt="Orders Api" /> -->
 
   &#xa0;
 
@@ -88,7 +88,7 @@ $ yarn start
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
-Made with :heart: by <a href="https://github.com/NodeJs-Experts" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/NodeJs-Experts" target="_blank">NodeJs Experts</a>
 
 &#xa0;
 
