@@ -24,13 +24,13 @@
   <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/NodeJs-Experts/orders-api?color=56BEB8" /> -->
 </p>
 
-<!-- Status -->
+Status
 
-<!-- <h4 align="center"> 
+<h4 align="center"> 
 	🚧  Orders Api 🚀 Under construction...  🚧
 </h4> 
 
-<hr> -->
+<hr>
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -50,9 +50,10 @@ Describe your project
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: REST Api;\
+<!-- :heavy_check_mark: ;\
+:heavy_check_mark: Feature 3; -->
+<!-- :heavy_check_mark: Payment by app; -->
 
 ## :rocket: Technologies ##
 
@@ -60,6 +61,10 @@ The following tools were used in this project:
 
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/pt-br/)
+- [TypeORM](https://typeorm.io/)
+- [Docker](https://www.docker.com/)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ## :white_check_mark: Requirements ##
 
@@ -78,15 +83,18 @@ $ cd orders-api
 $ yarn
 
 # Run the project
-$ yarn start
+$ yarn dev
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:3333>
 ```
 
 ## :memo: License ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
+## :memo: Rules ##
+
+This project follows its own business rules. For more information, see the [RULES](RULES.md) file.
 
 Made with :heart: by <a href="https://github.com/NodeJs-Experts" target="_blank">NodeJs Experts</a>
 
