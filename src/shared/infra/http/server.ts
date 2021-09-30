@@ -2,7 +2,7 @@ import express, { NextFunction, Request, Response } from 'express';
 
 import 'reflect-metadata';
 import 'express-async-errors';
-import { AppError } from '../../errors/AppErrors';
+import { AppError } from '@errors/AppErrors';
 import '../../containers';
 
 import createConnection from '../typeorm';
