@@ -71,4 +71,4 @@
 
 # Todo
 - [ ] Pesquisar formas de implementar as imagens das categorias, pratos e bebidas. 
-- [ ] Renomear tabela de endereços.
+
