@@ -19,6 +19,7 @@
 
 **RF**
 - [ ] Deve ser possivel cadastrar uma nova categoria.
+
 **RN**
 - [ ] Não deve ser possivel criar uma categoria com nome já existente.
 - [ ] O usuário responsável pelo cadastro, deve estar logado na ferramenta.
@@ -29,6 +30,7 @@
 
 **RF**
 - [ ] Deve ser possivel criar um novo prato de comida.
+
 **RN**
 - [ ] Não deve ser possivel criar um prato com nome já existente.
 - [ ] Não deve ser possivel criar um prato de comida para uma categoria não cadastrada.
@@ -39,6 +41,7 @@
 
 **RF**
 - [ ] Deve ser possivel cadastrar uma nova categoria de bebida.
+
 **RN**
 - [ ] Não deve ser possivel criar uma categoria com nome já existente.
 - [ ] O usuário responsável pelo cadastro, deve estar logado na ferramenta.
@@ -48,6 +51,7 @@
 
 **RF**
 - [ ] Deve ser possivel criar uma nova bebida.
+
 **RN**
 - [ ] Não deve ser possivel criar uma bebida com nome já existente.
 - [ ] Não deve ser possivel criar uma bebida para uma categoria não cadastrada.
@@ -58,6 +62,7 @@
 
 **RF**
 - [ ] Deve ser possivel criar um novo pedido.
+
 **RN**
 - [ ] O usuário responsável pelo cadastro, deve estar logado na ferramenta.
 - [ ] O usuário precisa informar o metodo de pagamento.
