@@ -6,6 +6,13 @@
 [x] Não deve ser possivel criar um novo usuário com o mesmo e-mail.
 [] A senha do usuário deve conter no minimo 8 caracteres, 1 caractere especial.
 
+# Endereço
+
+**RF**
+[x] Criar um novo endereço.
+**RN**
+[] O usuário deve estar logado na ferramenta.
+
 # Categoria de Comida
 
 **RF**
@@ -57,3 +64,4 @@
 
 # Todo
 [] Pesquisar formas de implementar as imagens das categorias, pratos e bebidas. 
+[] Renomear tabela de endereços.
