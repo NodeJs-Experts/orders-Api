@@ -1,10 +1,10 @@
 # Usuário
 
 **RF**
-[x] Criar usuário.
+- [x] Criar usuário.
 **RN**
-[x] Não deve ser possivel criar um novo usuário com o mesmo e-mail.
-[] A senha do usuário deve conter no minimo 8 caracteres, 1 caractere especial.
+- [x] Não deve ser possivel criar um novo usuário com o mesmo e-mail.
+- [] A senha do usuário deve conter no minimo 8 caracteres, 1 caractere especial.
 
 # Endereço
 
