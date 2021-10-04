@@ -13,7 +13,7 @@
 - [x] Criar um novo endereço.
 
 **RN**
-- [ ] O usuário deve estar logado na ferramenta.
+- [x] O usuário deve estar logado na ferramenta.
 
 # Categoria de Comida
 
