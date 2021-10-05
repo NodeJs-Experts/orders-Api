@@ -1,4 +1,8 @@
+import { Address } from '../infra/typeorm/entities/Address';
+
 interface ICreateUserDTO {
+  id?: string;
+  address?: Address[];
   name: string;
   last_name: string;
   password: string;

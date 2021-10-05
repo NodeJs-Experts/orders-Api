@@ -1,3 +1,5 @@
+import { User } from '../infra/typeorm/entities/User';
+
 interface ICreateAddressDTO {
   street: string;
   district: string;

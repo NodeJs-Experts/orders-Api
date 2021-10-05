@@ -2,6 +2,7 @@ import { getRepository, Repository } from 'typeorm';
 
 import { ICreateUserDTO } from '../../../dtos/ICreateUser';
 import { IUsersRepository } from '../../../repositories/IUsersRepository';
+import { Address } from '../entities/Address';
 import { User } from '../entities/User';
 
 class UsersRepository implements IUsersRepository {
@@ -15,6 +16,8 @@ class UsersRepository implements IUsersRepository {
     return user;
   }
   async create({
+    id,
+    address,
     email,
     last_name,
     name,
@@ -22,6 +25,8 @@ class UsersRepository implements IUsersRepository {
     phone,
   }: ICreateUserDTO): Promise<User> {
     const userCreate = this.repository.create({
+      id,
+      address,
       email,
       last_name,
       name,

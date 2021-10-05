@@ -10,6 +10,14 @@ class AddressRepository implements IAddressRepository {
   constructor() {
     this.repository = getRepository(Address);
   }
+  async findByIds(ids: string[]): Promise<Address[]> {
+    const addresses = await this.repository.findByIds(ids);
+    return addresses;
+  }
+  async findById(id: string): Promise<Address> {
+    const address = await this.repository.findOne(id);
+    return address;
+  }
   async create({
     cep,
     city,

@@ -1,10 +1,20 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  OneToMany,
+  PrimaryColumn,
+} from 'typeorm';
 import { v4 as uuid } from 'uuid';
+
+import { Address } from './Address';
 
 @Entity('users')
 class User {
   @PrimaryColumn()
-  id?: string;
+  id: string;
 
   @Column()
   name: string;
@@ -26,6 +36,14 @@ class User {
 
   @CreateDateColumn()
   created_at: Date;
+
+  @ManyToMany(() => Address)
+  @JoinTable({
+    name: 'user_address',
+    joinColumns: [{ name: 'user_id' }],
+    inverseJoinColumns: [{ name: 'address_id' }],
+  })
+  address: Address[];
 
   constructor() {
     if (!this.id) {

@@ -1,10 +1,21 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
+  PrimaryColumn,
+} from 'typeorm';
 import { v4 as uuid } from 'uuid';
+
+import { User } from './User';
 
 @Entity('address')
 class Address {
   @PrimaryColumn()
-  id?: string;
+  id: string;
 
   @Column()
   name: string;
@@ -31,7 +42,7 @@ class Address {
   cep: string;
 
   @CreateDateColumn()
-  created_at: Date;
+  created_at?: Date;
 
   constructor() {
     if (!this.id) {
