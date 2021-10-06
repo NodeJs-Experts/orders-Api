@@ -31,6 +31,12 @@ class AddressRepositoryInMemory implements IAddressRepository {
     this.repository.push(address);
     return address;
   }
+  findById(id: string): Promise<Address> {
+    throw new Error('Method not implemented.');
+  }
+  findByIds(ids: string[]): Promise<Address[]> {
+    throw new Error('Method not implemented.');
+  }
 }
 
 export { AddressRepositoryInMemory };

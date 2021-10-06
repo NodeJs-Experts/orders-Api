@@ -37,13 +37,13 @@ class User {
   @CreateDateColumn()
   created_at: Date;
 
-  @ManyToMany(() => Address)
+  @ManyToMany((type) => Address)
   @JoinTable({
     name: 'user_address',
     joinColumns: [{ name: 'user_id' }],
     inverseJoinColumns: [{ name: 'address_id' }],
   })
-  address: Address[];
+  addresses: Address[];
 
   constructor() {
     if (!this.id) {

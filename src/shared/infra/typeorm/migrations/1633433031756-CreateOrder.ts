@@ -8,12 +8,12 @@ export class CreateOrder1633433031756 implements MigrationInterface {
         columns: [
           { name: 'id', type: 'uuid', isPrimary: true },
           { name: 'description', type: 'varchar' },
-          { name: 'created_at', type: 'timestamp', default: 'now()' },
           { name: 'status', type: 'varchar' },
           { name: 'payment_type', type: 'varchar' },
           { name: 'drink_id', type: 'uuid' },
           { name: 'eat_id', type: 'uuid' },
           { name: 'plus_id', type: 'uuid' },
+          { name: 'created_at', type: 'timestamp', default: 'now()' },
         ],
       })
     );

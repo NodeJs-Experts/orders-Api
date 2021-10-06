@@ -18,10 +18,11 @@
 # Categoria de Comida
 
 **RF**
-- [ ] Deve ser possivel cadastrar uma nova categoria.
+- [x] Deve ser possivel cadastrar uma nova categoria.
+- [ ] Deve ser possivel listar as categorias cadastradas.
 
 **RN**
-- [ ] Não deve ser possivel criar uma categoria com nome já existente.
+- [x] Não deve ser possivel criar uma categoria com nome já existente.
 - [ ] O usuário responsável pelo cadastro, deve estar logado na ferramenta.
 - [ ] O usuário responsável pelo cadastro, deve ser administrador.
 

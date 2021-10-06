@@ -17,7 +17,7 @@ class UsersRepository implements IUsersRepository {
   }
   async create({
     id,
-    address,
+    addresses,
     email,
     last_name,
     name,
@@ -26,7 +26,7 @@ class UsersRepository implements IUsersRepository {
   }: ICreateUserDTO): Promise<User> {
     const userCreate = this.repository.create({
       id,
-      address,
+      addresses,
       email,
       last_name,
       name,

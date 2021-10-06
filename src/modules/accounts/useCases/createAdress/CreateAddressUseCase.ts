@@ -57,7 +57,8 @@ class CreateAddressUseCase {
     const addresses = await this.addressRepository.findByIds([
       createAddress.id,
     ]);
-    user.address = addresses;
+
+    user.addresses = addresses;
     await this.usersRepository.create(user);
     return user;
   }
