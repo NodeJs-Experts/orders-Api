@@ -19,6 +19,7 @@ class AddressRepository implements IAddressRepository {
     return address;
   }
   async create({
+    user,
     cep,
     city,
     complement,
@@ -29,6 +30,7 @@ class AddressRepository implements IAddressRepository {
     street,
   }: ICreateAddressDTO): Promise<Address> {
     const create = this.repository.create({
+      user,
       cep,
       city,
       complement,

@@ -37,12 +37,7 @@ class User {
   @CreateDateColumn()
   created_at: Date;
 
-  @ManyToMany((type) => Address)
-  @JoinTable({
-    name: 'user_address',
-    joinColumns: [{ name: 'user_id' }],
-    inverseJoinColumns: [{ name: 'address_id' }],
-  })
+  @OneToMany(() => User, (user) => user.addresses)
   addresses: Address[];
 
   constructor() {

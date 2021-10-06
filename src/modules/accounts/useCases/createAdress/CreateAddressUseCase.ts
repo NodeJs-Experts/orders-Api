@@ -37,13 +37,14 @@ class CreateAddressUseCase {
     state,
     street,
     cep,
-  }: IRequest): Promise<User> {
+  }: IRequest): Promise<Address> {
     const user = await this.usersRepository.findById(user_id);
 
     if (!user) {
       throw new AppError('User does not exists!');
     }
     const createAddress = await this.addressRepository.create({
+      user,
       city,
       complement,
       district,
@@ -54,13 +55,7 @@ class CreateAddressUseCase {
       cep,
     });
 
-    const addresses = await this.addressRepository.findByIds([
-      createAddress.id,
-    ]);
-
-    user.addresses = addresses;
-    await this.usersRepository.create(user);
-    return user;
+    return createAddress;
   }
 }
 

@@ -9,6 +9,7 @@ interface ICreateAddressDTO {
   complement: string;
   name: string;
   cep: string;
+  user: User;
 }
 
 export { ICreateAddressDTO };

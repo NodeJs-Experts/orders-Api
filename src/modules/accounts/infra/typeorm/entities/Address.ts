@@ -2,10 +2,8 @@ import {
   Column,
   CreateDateColumn,
   Entity,
-  JoinTable,
-  ManyToMany,
+  JoinColumn,
   ManyToOne,
-  OneToMany,
   PrimaryColumn,
 } from 'typeorm';
 import { v4 as uuid } from 'uuid';
@@ -43,6 +41,12 @@ class Address {
 
   @CreateDateColumn()
   created_at?: Date;
+
+  @JoinColumn({ name: 'user_id' })
+  @ManyToOne(() => User)
+  user: User;
+  // @Column()
+  // user_id: string;
 
   constructor() {
     if (!this.id) {
