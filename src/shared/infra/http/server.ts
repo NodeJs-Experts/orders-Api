@@ -2,7 +2,11 @@ import express, { NextFunction, Request, Response } from 'express';
 
 import 'reflect-metadata';
 import 'express-async-errors';
+import swaggerUi from 'swagger-ui-express';
+
+import swaggerFile from '../../../swagger.json';
 import { AppError } from '../../errors/AppErrors';
+
 import '../../containers';
 
 import createConnection from '../typeorm';
@@ -14,6 +18,7 @@ const port = process.env.PORT || 3333;
 createConnection();
 
 app.use(express.json());
+app.use('/app-doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use(routes);
 
 app.use(
