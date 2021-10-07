@@ -5,6 +5,6 @@ import { AuthUserController } from '@modules/accounts/useCases/authUserUseCase/A
 const authUserController = new AuthUserController();
 const authRoutes = Router();
 
-authRoutes.post('/session', authUserController.handle);
+authRoutes.post('/sessions', authUserController.handle);
 
 export { authRoutes };
