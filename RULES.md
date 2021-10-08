@@ -19,11 +19,11 @@
 
 **RF**
 - [x] Deve ser possivel cadastrar uma nova categoria.
-- [ ] Deve ser possivel listar as categorias cadastradas.
+- [x] Deve ser possivel listar as categorias cadastradas.
 
 **RN**
 - [x] Não deve ser possivel criar uma categoria com nome já existente.
-- [ ] O usuário responsável pelo cadastro, deve estar logado na ferramenta.
+- [x] O usuário responsável pelo cadastro, deve estar logado na ferramenta.
 - [ ] O usuário responsável pelo cadastro, deve ser administrador.
 
 

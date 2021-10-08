@@ -48,10 +48,10 @@
         },
         "responses": {
           "201": {
-            "description": "Created"
+            "$ref": "#/components/responses/201"
           },
           "400": {
-            "description": "Ocorreu um erro ao criar um usuário!"
+            "$ref": "#/components/responses/400"
           }
         }
       }
@@ -77,7 +77,7 @@
                   }
                 },
                 "example": {
-                  "email": "teste",
+                  "email": "teste@testando.com",
                   "password": "1234"
                 }
               }
@@ -111,20 +111,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
+          "401": {
+            "$ref": "#/components/responses/401"
           }
         }
       }
@@ -183,24 +171,145 @@
         },
         "responses": {
           "201": {
-            "description": "Created"
+            "$ref": "#/components/responses/201"
           },
           "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "string"
-                    }
-                  }
+            "$ref": "#/components/responses/401"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/categories/eat": {
+      "post": {
+        "tags": [
+          "Categories"
+        ],
+        "summary": "Create a eat category",
+        "description": "Add a new eat category",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/categories"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "$ref": "#/components/responses/201"
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Categories"
+        ],
+        "summary": "List all eat categories",
+        "description": "List all eat categories",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/categories"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "categories": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "label": "Alemã",
+          "description": "Pratos tipicos da Alemanha"
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "Created"
+      },
+      "400": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
                 }
               }
             }
           }
         }
+      },
+      "401": {
+        "description": "Unauthorized",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "categories": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
       }
     }
   }

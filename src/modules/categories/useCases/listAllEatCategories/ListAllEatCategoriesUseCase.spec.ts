@@ -2,7 +2,7 @@ import { IEatCategoryRepository } from '@modules/categories/repositories/IEatCat
 import { EatCategoryRepositoryInMemory } from '@modules/categories/repositories/in-memory/EatCategoryRepositoryInMemory';
 
 import { CreateEatCategoriesUseCase } from '../createEatCategories/CreateEatCategoriesUseCase';
-import { ListAllEatCategoriesUseCase } from './ListAllCategoriesUseCase';
+import { ListAllEatCategoriesUseCase } from './ListAllEatCategoriesUseCase';
 
 describe('List All Eat Categories', () => {
   let eatCategoryRepositoryInMemory: IEatCategoryRepository;
@@ -25,7 +25,7 @@ describe('List All Eat Categories', () => {
       description: 'Eat test',
     });
 
-    const all = await eatCategoryRepositoryInMemory.list();
+    const all = await listAllEatCategoriesUseCase.execute();
 
     expect(all.length).toBe(1);
   });
