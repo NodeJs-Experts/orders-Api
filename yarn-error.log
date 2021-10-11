@@ -1,0 +1,79 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\g0056557\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add sqlite3
+
+PATH: 
+  C:\Program Files (x86)\Google\Chrome\Application;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\oracle\ora817\bin;C:\ORACLE\product\11.2.0\client_1\bin;C:\oracle\product\10.2.0\client_1\bin;c:\Tuxedo\Tuxedo9.0\bin;C:\Program Files (x86)\Nice Systems\NICE Player Codec Pack\\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Oracle\jre\1.1.7\bin;C:\Program Files (x86)\Altitude\Altitude uCI 7.1\Altitude uSupervisor;\WindowsTUXDIR\Windows\bin;\WindowsTERRAPIN_DIR\Windows;\WindowsJDIC_DIR\Windows;C:\KenanFX\FXLauncher\Terrapin;C:\KenanFX\FXLauncher\jdic-20061102-bin-win;c:\Tuxedo\Tuxedo9.0\bin;c:\Tuxedo\Tuxedo9.0\jre\bin\server;c:\Tuxedo\Tuxedo9.0\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\PuTTY\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\;C:\Program Files\nodejs\;C:\Users\g0056557\AppData\Local\Microsoft\WindowsApps;C:\Users\g0056557\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\g0056557\AppData\Local\GitHubDesktop\bin;C:\Users\g0056557\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.15
+
+Node version: 
+  14.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: self signed certificate in certificate chain
+      at TLSSocket.onConnectSecure (_tls_wrap.js:1497:34)
+      at TLSSocket.emit (events.js:315:20)
+      at TLSSocket._finishInit (_tls_wrap.js:932:8)
+      at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:706:12)
+
+npm manifest: 
+  {
+    "name": "orders-Api",
+    "version": "1.0.0",
+    "main": "src/shared/infra/http/server.ts",
+    "repository": "https://github.com/NodeJs-Experts/orders-Api.git",
+    "author": "NodeJs Experts <https://github.com/NodeJs-Experts>",
+    "license": "MIT",
+    "scripts": {
+      "build": "tsc",
+      "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
+      "start": "node dist/server.js",
+      "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli ",
+      "test": "jest"
+    },
+    "dependencies": {
+      "bcrypt": "^5.0.1",
+      "express": "^4.17.1",
+      "express-async-errors": "^3.1.1",
+      "jsonwebtoken": "^8.5.1",
+      "pg": "^8.7.1",
+      "reflect-metadata": "^0.1.13",
+      "swagger-ui-express": "^4.1.6",
+      "ts-jest": "^27.0.5",
+      "tsyringe": "^4.6.0",
+      "typeorm": "^0.2.37",
+      "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+      "@types/bcrypt": "^5.0.0",
+      "@types/express": "^4.17.13",
+      "@types/jest": "^27.0.2",
+      "@types/jsonwebtoken": "^8.5.5",
+      "@types/swagger-ui-express": "^4.1.3",
+      "@types/uuid": "^8.3.1",
+      "@typescript-eslint/eslint-plugin": "^4.29.1",
+      "@typescript-eslint/parser": "^4.29.1",
+      "eslint": "^7.32.0",
+      "eslint-config-airbnb-base": "^14.2.1",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-import-resolver-typescript": "^2.4.0",
+      "eslint-plugin-import": "^2.24.0",
+      "eslint-plugin-import-helpers": "^1.1.0",
+      "eslint-plugin-prettier": "^3.4.0",
+      "jest": "^27.2.4",
+      "prettier": "^2.3.2",
+      "ts-node-dev": "^1.1.8",
+      "tsconfig-paths": "^3.11.0",
+      "typescript": "^4.4.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
