@@ -8,4 +8,8 @@ import { getConnectionOptions, Connection, createConnection } from 'typeorm';
 //     })
 //   );
 // };
-(async()=> await createConnection())
+const create = async () => {
+  createConnection();
+};
+
+create();

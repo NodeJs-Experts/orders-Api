@@ -8,14 +8,15 @@ import swaggerFile from '../../../swagger.json';
 import { AppError } from '../../errors/AppErrors';
 
 import '../../containers';
+import '../typeorm';
 
-import createConnection from '../typeorm';
+// import createConnection from '../typeorm';
 import { routes } from './routes';
 
 const app = express();
 const port = process.env.PORT || 3333;
 
-createConnection();
+// createConnection();
 
 app.use(express.json());
 app.use('/app-doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
