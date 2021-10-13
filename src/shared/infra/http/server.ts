@@ -9,7 +9,8 @@ import swaggerFile from '../../../swagger.json';
 import { AppError } from '../../errors/AppErrors';
 
 import '../../containers';
-import createConnection from '../typeorm';
+//import createConnection from '../typeorm';
+import '../typeorm';
 import { routes } from './routes';
 
 dotenv.config();
@@ -17,7 +18,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3333;
 
-createConnection();
+//createConnection();
 
 app.use(express.json());
 app.use('/app-doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
