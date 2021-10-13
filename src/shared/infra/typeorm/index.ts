@@ -1,9 +1,15 @@
 import { getConnectionOptions, Connection, createConnection } from 'typeorm';
 
-export default async (): Promise<Connection> => {
-  const defaultConnection = await getConnectionOptions();
-  return createConnection(
-    Object.assign(defaultConnection, {
-    })
-  );
-};
+//export default async (): Promise<Connection> => {
+ // const defaultConnection = await getConnectionOptions();
+  //return createConnection(
+   // Object.assign(defaultConnection, {
+   // })
+ // );
+//};
+
+const connection = async () => {
+  await createConnection();
+}
+
+connection();
